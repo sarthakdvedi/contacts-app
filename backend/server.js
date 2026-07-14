@@ -3,10 +3,12 @@ const app = express();
 const dotenv = require('dotenv').config();
 const errorHandler = require('./middleware/errorHandler');
 const connectDB = require('./config/dbConnection');
+const cors = require('cors');
 
 const PORT = process.env.PORT || 3000;
 
 connectDB();
+app.use(cors()); // Enables CORS for all routes
 app.use(express.json()); // parses data stream from request body into JSON format 
 app.use('/api/contacts', require('./routes/contactRoutes'));
 app.use('/api/users', require('./routes/userRoutes'));
