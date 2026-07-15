@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="relative h-full w-full">
       <Routes>
+        <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route
           path="/contacts/add"
           element={
