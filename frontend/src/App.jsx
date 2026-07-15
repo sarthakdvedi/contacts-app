@@ -1,5 +1,6 @@
 import './index.css'
 import { Routes, Route } from "react-router";
+import { Navigate } from "react-router";
 
 import AddContactPage from './pages/AddContactPage.jsx';
 import DashboardPage from './pages/DashboardPage.jsx';
